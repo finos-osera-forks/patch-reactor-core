@@ -1,0 +1,17 @@
+schema: osera-patch-evidence/0.1.0
+producer: moderne
+release: 3.4.41.1-osera-00001
+baseline: v3.4.41+patch.baseline
+fixes:
+  - cve: CVE-2025-22227
+    upstream: https://nvd.nist.gov/vuln/detail/CVE-2025-22227
+    artifacts:
+      - io.projectreactor.netty:reactor-netty-http
+    note: New in this release; ported onto 2020.0.47; fixed at 1.0.48.1-backpatch-00001 (backpatch-reactor-netty@fa4fd4a..e6c0969).
+tests:
+  commit: 52d74fa45358f480e99a5f71d4192fc024bdb67d
+  command: none in this repository
+  runtime: none, no build or test ran for this release
+  report: carried, see the evidence of the release named in the note
+  result: pass
+  note: this release changes nothing in this repository, nothing ran here; its test provenance is reactor-2020.0 2020.0.47.1-osera-00001 in finos-osera-forks/patch-reactor at v2020.0.47.1-osera-00001, whose .osera/patch-evidence.yaml records the tests that ran
